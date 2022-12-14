@@ -1,0 +1,45 @@
+<form [formGroup]="exform">
+  <table>
+    <tr>
+      <th>Name</th>
+      <td>
+        <input type="text" placeholder="Enter Name" formControlName="name" />
+      </td>
+
+      <small *ngIf="exform.get('name')?.invalid && exform.get('name')?.touched">Name Required</small>
+
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td>
+        <input type="text" placeholder="Enter EmailID" formControlName="email" />
+      </td>
+
+      <small *ngIf="exform.get('email')?.invalid && exform.get('email')?.touched">EmailID Required</small>
+
+    </tr>
+    <tr>
+      <th>Phone</th>
+      <td>
+        <input type="text" placeholder="Enter Phone" formControlName="phone" />
+      </td>
+
+      <small *ngIf="exform.get('phone')?.invalid && exform.get('phone')?.touched">Phone Required</small>
+
+    </tr>
+    <tr>
+      <th>Message</th>
+      <td>
+        <textarea formControlName="message"></textarea>
+      </td>
+
+      <small *ngIf="exform.get('message')?.invalid && exform.get('message')?.touched">Message Required</small>
+
+    </tr>
+    <tr>
+      <td>
+        <button (click)="clicksub()" type="button" [disabled]="exform.invalid">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>

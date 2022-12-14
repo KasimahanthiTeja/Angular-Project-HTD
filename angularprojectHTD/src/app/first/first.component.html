@@ -1,0 +1,144 @@
+<p>first works!</p>
+
+<h1 style="text-align:center"><b><u><p>This is the first component in angular project</p></u></b></h1>
+
+Interpolation:-
+<br />
+----------------
+<br />
+{{FirstName}}
+{{LastName}}
+<br />
+Addition of two numbers is {{Add()}}
+<br />
+Bonus for the employees are given as {{Bonus * 30}}
+<br />
+<input type="button" [value]='btntext'>
+<br />
+<button disabled='{{isDisabled}}'>Cancel</button>
+<br />
+<button (click)="clickme()">submit</button>
+You have clicked {{clickcount}}
+<br />
+<br />
+Property Binding :-
+<br />
+--------------------
+<br />
+<input type="text" name="Address" [(ngModel)]="Address">
+The Address Which u have Entered is : {{Address}}
+<button (click)="clearAdd()">Clear</button>
+<br />
+<p>Enter X value : <input type="number" name="x1" [(ngModel)]="x1"></p>
+<p>Enter Y value : <input type="number" name="y1" [(ngModel)]="y1"></p>
+The result of addition is {{add()}}
+<br />
+<p>
+  <button [disabled]="!buttonDisabled">
+    New Button
+  </button>
+</p>
+<br />
+<p [innerHTML]="nameDetails"></p>
+<br />
+<h1 [style.color]="color">It's valentines </h1>
+<br />
+<h1 [style.color]="colors" [style.font-size]="fontSize" [style.opacity]="opacity">It's valentines </h1>
+<br />
+<h1 [ngStyle]="styles">It's valentines </h1>
+<br />
+<br />
+Event Binding:-
+<br />
+---------------
+<br />
+<input (keypress)="pressFunction()">
+<br />
+<h3>
+  Input for key up
+</h3>
+<input (keyup)="upFunction()" />
+<br />
+<h3>
+  Input for key Down
+</h3>
+<input (keydown)="downFunction()" />
+<br />
+<button (click)="clickFunction()">New Button</button>
+<br />
+<br />
+Structural Directives:-
+<br />
+------------------------
+<br />
+NGIF STATEMENT
+<br />
+===============
+<br />
+<div *ngIf="true">
+  This text will be hidden
+  <h1 [ngStyle]="{'color':'#FF0000'}">
+    GFG Structural Directive Example
+  </h1>
+</div>
+<div *ngIf="true">
+  This text will be displayed
+  <h1 [ngStyle]="{'color':'#00FF00'}">
+    GFG Structural Directive Example
+  </h1>
+</div>
+<br />
+NGIFELSE STATEMENT:-
+<br />
+=====================
+<br />
+
+<div *ngIf="false;else id_selector">
+  This text will be hidden
+  <h1 [ngStyle]="{'color':'#FF0000'}">
+    GFG Structural Directive
+    If Part
+  </h1>
+</div>
+<ng-template #id_selector>
+  This text will be displayed
+  <h1 [ngStyle]="{'color':'#00FF00'}">
+    GFG Structural Directive
+    Else Part
+  </h1>
+</ng-template>
+<br />
+NGFOR STATEMENT:-
+<br />
+=================
+<br />
+
+<div *ngFor="let item of items">
+  <p>  {{item}} </p>
+</div>
+<br />
+NGSWITCH STATEMENT:-
+<br />
+=====================
+<br />
+<div [ngSwitch]="'one'">
+  <div *ngSwitchCase="'one'">One is Displayed</div>
+  <div *ngSwitchCase="'two'">Two is Displayed</div>
+  <div *ngSwitchDefault>Default Option is Displayed</div>
+</div>
+<br />
+NG STYLE STATEMENT:-
+<br />
+====================
+<br />
+
+
+<p [ngStyle]="{'color': 'blue', 'font-size': '14px'}">
+  paragraph style is applied using ngStyle
+</p>
+<div [ngStyle]="{'background-color':'green'}">Hi hello</div>
+<div [ngStyle]="mystyle">Welcome</div>
+<p [ngStyle]="mystyle">Welcome</p>
+
+<button (click)="addstyles()">Click Me</button>
+
